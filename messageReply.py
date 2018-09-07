@@ -1,4 +1,4 @@
-# -*- vk sending messages on replies -*-
+
 import time
 import vk_api
 from time import sleep
@@ -14,9 +14,7 @@ print("message to send:")
 mess=input()
  
 vk = vk_api.VkApi(login = login, password = password)
-#vk_api.VkApi(token = 'a02d...e83fd') app login
 vk.auth()
- 
 messages = vk.method('messages.get', {"count":1})
 last = messages['items'][0]['id']
  
